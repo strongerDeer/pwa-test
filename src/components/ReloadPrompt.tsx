@@ -1,8 +1,12 @@
+// [!] PWA의 서비스 워커 상태를 관리하고 사용자에게 알리는 컴포넌트
+
+// Vite PWA 플러그인이 제공하는 React 훅을 가져옴. 서비스 워커 등록 및 업데이트 관리
 import { useRegisterSW } from "virtual:pwa-register/react";
 import { useState, useEffect } from "react";
 import "./ReloadPrompt.css";
 
 function ReloadPrompt() {
+  // useRegisterSW를 사용하여 서비스 워커 상태 및 제어 함수를 가져옴
   const {
     offlineReady: [offlineReady, setOfflineReady],
     needRefresh: [needRefresh, setNeedRefresh],

@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.tsx";
 import { registerSW } from "virtual:pwa-register";
+import ReloadPrompt from "./components/ReloadPrompt.tsx";
 
 const updateSW = registerSW({
   onNeedRefresh() {
@@ -19,6 +20,7 @@ const updateSW = registerSW({
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
+    <ReloadPrompt />
     <App />
   </StrictMode>
 );
